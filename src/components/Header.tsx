@@ -12,25 +12,29 @@ function Header() {
     { name: 'Contact Us', url: '/contact' },
   ]
   return (
-    <div className="flex justify-between">
-      <img src={logo} alt="logo" />
-      <button
-        onClick={() => {
-          setOpen(!open)
-        }}
-      >
-        <MenuIcon fontSize="large" />
-      </button>
-      <div className={open ? 'flex flex-col' : 'hidden'}>
-        <div>
-          {navi.map((naviItem) => (
-            <Link to={`${naviItem.url}`} key={naviItem.name}>
-              {naviItem.name}
-            </Link>
-          ))}
+    <>
+      <div className="flex justify-between mx-5">
+        <img src={logo} alt="logo" className="w-40" />
+        <button
+          onClick={() => {
+            setOpen(!open)
+          }}
+        >
+          <MenuIcon fontSize="large" />
+        </button>
+      </div>
+      <div>
+        <div className={open ? 'flex flex-col' : 'hidden'}>
+          <div>
+            {navi.map((naviItem) => (
+              <Link to={`${naviItem.url}`} key={naviItem.name}>
+                {naviItem.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
