@@ -9,6 +9,8 @@ function Header() {
   const navi = [
     { name: 'Home', url: '/' },
     { name: 'Menu', url: '/menu' },
+    { name: 'Log In', url: '/login' },
+    { name: 'Registration', url: '/registration' },
     { name: 'Contact Us', url: '/contact' },
   ]
   return (
