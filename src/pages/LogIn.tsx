@@ -1,27 +1,37 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 function LogIn() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
   return (
     <div className="bg-white ">
       <h1 className="ml-5 text-4xl font-bold border-b-4 w-full border-neutral-800">
         LOG IN
       </h1>
-      <form className="flex flex-col mx-10 pt-10 pb-20 ">
+      <form
+        className="flex flex-col mx-10 pt-10 pb-20 "
+        onSubmit={handleSubmit((data) => console.log(data))}
+      >
         <input
           type="text"
-          name="name"
-          id="name"
+          {...register('email', { required: 'Email Address is required' })}
+          id="email"
           placeholder="email"
-          className="text-lg p-1 my-3 border-2 border-neutral-300 rounded-md w-1/5"
+          className="text-lg p-1 my-3 border-2 border-neutral-300 rounded-md w-1/3"
         />
+        {errors.email && <p>This field is required</p>}
         <input
           type="password"
-          name="password"
+          {...register('password', { required: 'Password is required' })}
           id="password"
           placeholder="password"
-          className="text-lg p-1 my-3 border-2 border-neutral-300 rounded-md w-1/5"
+          className="text-lg p-1 my-3 border-2 border-neutral-300 rounded-md w-1/3"
         />
+        {errors.password && <p>This field is required</p>}
         <h2 className="font-semibold text-lg">
           Not yet registered?{' '}
           <Link
