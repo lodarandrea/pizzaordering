@@ -9,7 +9,7 @@ function LogIn() {
   } = useForm()
   return (
     <div className="bg-white ">
-      <h1 className="ml-5 text-4xl font-bold border-b-4 w-full border-neutral-800">
+      <h1 className="pl-5 pt-10 text-4xl font-semibold border-b-4 border-neutral-800">
         LOG IN
       </h1>
       <form
@@ -36,7 +36,7 @@ function LogIn() {
           Not yet registered?{' '}
           <Link
             to="/registration"
-            className="font-semibold text-indigo-800 underline"
+            className="font-semibold text-indigo-800 underline hover:font-bold"
           >
             Registration
           </Link>
