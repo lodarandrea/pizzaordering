@@ -4,6 +4,7 @@ import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
 import LogIn from './pages/LogIn'
 import Registration from './pages/Registration'
+import FooterPage from './pages/FooterPage'
 
 function App(): JSX.Element {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ function App(): JSX.Element {
         {
           path: '/registration',
           element: <Registration />,
+        },
+        {
+          path: '/footerpage',
+          element: <FooterPage />,
         },
       ],
     },

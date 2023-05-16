@@ -21,6 +21,7 @@ function Registration() {
           type="email"
           {...register('email', {
             required: 'Email required!',
+            // eslint-disable-next-line no-useless-escape
             pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
           })}
           id="email"
