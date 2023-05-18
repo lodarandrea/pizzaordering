@@ -3,25 +3,37 @@ import Wave from '../img/wave.png'
 function FooterPage() {
   return (
     <div className="bg-white">
-      <div className="flex flex-col h-5/6 bg-gradient-to-r from-purple-600 to-indigo-600 relative">
-        <h1 className="mt-12 mb-32 text-center font-bold text-7xl text-white">
+      <div className="flex flex-col pt-40 bg-gradient-to-r from-purple-600 to-indigo-600 relative overflow-x-hidden">
+        <h1 className="mb-48 text-center font-bold text-7xl text-white">
           Lorem Ipsum
         </h1>
-
         <div
-          className="h-16 w-full absolute bottom-0 left-0 transition duration-700 ease-linear translate-x-10 "
+          className="h-36 absolute bottom-0 -left-full animate-flow3"
           style={{
             backgroundImage: `url(${Wave})`,
-            opacity: 0.5,
+            width: '500vw',
+            opacity: 0.3,
             backgroundSize: '600px 60px',
             backgroundRepeat: 'repeat-x',
             backgroundPosition: 'bottom',
           }}
         ></div>
         <div
-          className="h-12 w-full absolute bottom-0 left-0 animate-flow "
+          className="h-16 absolute bottom-0 -left-full animate-flow2 "
           style={{
             backgroundImage: `url(${Wave})`,
+            opacity: 0.5,
+            width: '500vw',
+            backgroundSize: '500px 50px',
+            backgroundRepeat: 'repeat-x',
+            backgroundPosition: 'bottom',
+          }}
+        ></div>
+        <div
+          className="h-12 absolute bottom-0 -left-full animate-flow1"
+          style={{
+            backgroundImage: `url(${Wave})`,
+            width: '500vw',
             backgroundSize: '450px 45px',
             backgroundRepeat: 'repeat-x',
             backgroundPosition: 'bottom',
