@@ -16,9 +16,9 @@ module.exports = {
         },
       },
       animation: {
-        flow1: 'flow 10s ease-in-out infinite',
-        flow2: 'flow 20s ease-in-out infinite',
-        flow3: 'flowRevert 30s ease-in-out infinite',
+        flow1: 'flow 10s linear infinite',
+        flow2: 'flow 15s linear infinite',
+        flow3: 'flowRevert 18s linear infinite',
       },
     },
   },

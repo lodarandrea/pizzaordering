@@ -11,6 +11,7 @@ function Footer() {
         <h1 className=" font-bold text-2xl tracking-wider mb-2">COMPANY</h1>
         <Link
           to="/footerpage"
+          preventScrollReset={true}
           className="font-medium text-lg text-indigo-700 my-1 hover:border-b-2 hover:border-indigo-700 hover:ease-in-out hover:delay-75 hover:duration-100"
         >
           ABOUT US
