@@ -9,7 +9,7 @@ function Registration() {
   } = useForm()
 
   return (
-    <div className="bg-white">
+    <div>
       <h1 className="pl-5 pt-10 font-semibold text-4xl border-b-4 border-neutral-800">
         REGISTRATION
       </h1>
