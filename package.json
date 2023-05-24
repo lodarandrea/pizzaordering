@@ -30,7 +30,8 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "server": "node server/server.js"
   },
   "browserslist": {
     "production": [
@@ -55,6 +56,8 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.0",
+    "koa": "^2.14.2",
+    "koa-route": "^3.2.0",
     "lint-staged": "^13.2.0",
     "prettier": "2.8.4",
     "tailwindcss": "^3.2.7",
