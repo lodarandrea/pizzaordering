@@ -6,6 +6,7 @@ const cors = require('@koa/cors')
 const foodHandler = (ctx) => {
   ctx.body = [
     {
+      id: 1,
       name: 'Simple',
       base: 'tomato',
       imageUrl:
@@ -14,6 +15,7 @@ const foodHandler = (ctx) => {
       price: 2000,
     },
     {
+      id: 2,
       name: 'Jenky',
       base: 'creemy',
       imageUrl:
@@ -22,6 +24,7 @@ const foodHandler = (ctx) => {
       price: 2000,
     },
     {
+      id: 3,
       name: 'Barbecue',
       base: 'barbecue',
       imageUrl:
