@@ -9,7 +9,6 @@ function Menu() {
   useEffect(() => {
     customFetch('/food', setMenuItems)
   }, [])
-  console.log(menuItems)
 
   return (
     <div className="my-10 mx-4">
