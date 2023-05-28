@@ -5,7 +5,6 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@koa/cors": "^4.0.0",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.12",
     "@reduxjs/toolkit": "^1.9.3",
@@ -60,6 +59,7 @@
     "husky": "^8.0.0",
     "koa": "^2.14.2",
     "koa-route": "^3.2.0",
+    "@koa/cors": "^4.0.0",
     "lint-staged": "^13.2.0",
     "prettier": "2.8.4",
     "tailwindcss": "^3.2.7",

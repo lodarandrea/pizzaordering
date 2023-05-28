@@ -1,5 +1,5 @@
-import { addToCart } from '../components/Store/CartSlice'
-import { useAppDispatch } from './Store/Hooks'
+import { addToCart } from './store/CartSlice'
+import { useAppDispatch } from './store/Hooks'
 
 interface CardPops {
   id: number
