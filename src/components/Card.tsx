@@ -30,9 +30,7 @@ function Card({ id, imgSrc, name, pizzaIngred, price }: CardPops) {
         </h3>
         <button
           className="bg-indigo-700 w-32 absolute bottom-2 right-3 rounded-3xl text-white font-medium px-4 py-2"
-          onClick={() =>
-            dispatch(addToCart({ id, name, imgSrc, price, quantity: 0 }))
-          }
+          onClick={() => dispatch(addToCart({ id, name, imgSrc, price }))}
         >
           Add to Cart
         </button>
