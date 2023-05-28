@@ -5,7 +5,6 @@ export interface AddToCartPayload {
   name?: string
   imgSrc?: string
   price?: number
-  quantity: number
 }
 
 export interface CartItems {
