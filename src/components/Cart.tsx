@@ -1,5 +1,5 @@
 import CartItem from './CartItem'
-import { useAppSelector } from './Store/Hooks'
+import { useAppSelector } from './store/Hooks'
 
 function Cart() {
   const cart = useAppSelector((state) => state.cart)
