@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { customFetch } from '../Services/FetchService'
+import { customFetch } from '../services/FetchService'
 import { MenuCard } from '../components/model/MenuCard'
 import Card from '../components/Card'
 import Cart from '../components/Cart'
@@ -9,7 +9,6 @@ function Menu() {
   useEffect(() => {
     customFetch('/food', setMenuItems)
   }, [])
-  console.log(menuItems)
 
   return (
     <div className="my-10 mx-4">
