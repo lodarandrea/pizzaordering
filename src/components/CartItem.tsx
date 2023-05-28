@@ -2,7 +2,7 @@ import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
-} from '../components/store/CartSlice'
+} from './store/CartSlice'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded'

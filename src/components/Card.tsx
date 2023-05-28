@@ -1,4 +1,4 @@
-import { addToCart } from '../components/store/CartSlice'
+import { addToCart } from './store/CartSlice'
 import { useAppDispatch } from './store/Hooks'
 
 interface CardPops {
