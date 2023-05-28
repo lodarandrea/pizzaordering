@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { customFetch } from '../Services/FetchService'
+import { customFetch } from '../services/FetchService'
 import { MenuCard } from '../components/model/MenuCard'
 import Card from '../components/Card'
 import Cart from '../components/Cart'
