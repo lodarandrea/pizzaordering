@@ -2,11 +2,11 @@ import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
-} from './store/CartSlice'
+} from '../store/CartSlice'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded'
-import { useAppDispatch } from './store/Hooks'
+import { useAppDispatch } from '../store/Hooks'
 
 export interface CardItemPops {
   id: number
