@@ -16,7 +16,7 @@ function Header() {
   return (
     <div>
       <div className="flex justify-between px-5 py-3 bg-white">
-        <Link to={'/'} className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={logo} alt="logo" className="w-20 pr-3" />
           <h1 className="font-extrabold text-sm">
             PIZZA <br /> MAN
@@ -25,7 +25,7 @@ function Header() {
         <div className="hidden lg:flex lg:items-center">
           {navi.map((naviItem) => (
             <Link
-              to={`${naviItem.url}`}
+              to={naviItem.url}
               key={naviItem.name}
               className=" font-bold mx-3"
             >
@@ -50,7 +50,7 @@ function Header() {
               : 'hidden'
           }
         >
-          <Link to={'/'} className="flex items-center mt-7 mb-5">
+          <Link to="/" className="flex items-center mt-7 mb-5">
             <img src={logo} alt="logo" className="w-20 pr-3" />
             <h1 className="font-extrabold text-sm">
               PIZZA <br /> MAN
@@ -59,7 +59,7 @@ function Header() {
           <div className="flex flex-col p-2">
             {navi.map((naviItem) => (
               <Link
-                to={`${naviItem.url}`}
+                to={naviItem.url}
                 key={naviItem.name}
                 className="my-2 text-base font-semibold"
               >
