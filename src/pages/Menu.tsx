@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { customFetch } from '../services/FetchService'
-import { MenuCard } from '../components/model/MenuCard'
+import { MenuItem } from '../components/model/MenuItem'
 import Card from '../components/Card'
 import Cart from '../components/Cart'
 
 function Menu() {
-  const [menuItems, setMenuItems] = useState<Array<MenuCard>>([])
+  const [menuItems, setMenuItems] = useState<Array<MenuItem>>([])
   useEffect(() => {
     customFetch('/food', setMenuItems)
   }, [])
@@ -17,14 +17,8 @@ function Menu() {
       </div>
       <div className="my-8 flex">
         {menuItems.map((item) => (
-          <div className="basis-1/4" key={item.name}>
-            <Card
-              id={item.id}
-              imgSrc={item.imageUrl}
-              name={item.name}
-              pizzaIngred={item.ing}
-              price={item.price}
-            />
+          <div className="basis-1/4" key={item.id}>
+            <Card item={item} />
           </div>
         ))}
 

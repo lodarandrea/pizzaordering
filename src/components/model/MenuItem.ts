@@ -1,4 +1,4 @@
-export interface MenuCard {
+export interface MenuItem {
   id: number
   name: string
   imageUrl: string

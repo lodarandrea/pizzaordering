@@ -10,14 +10,7 @@ function Cart() {
       </div>
       <div>
         {cart?.map((item) => (
-          <CartItem
-            key={item.id}
-            id={item.id}
-            pizzaName={item.name}
-            imgSrc={item.imgSrc}
-            price={item.price}
-            quantity={item.quantity}
-          />
+          <CartItem item={item} />
         ))}
       </div>
     </div>
