@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { customFetch } from '../services/FetchService'
-import { MenuItem } from '../components/model/MenuCard'
+import { MenuItem } from '../components/model/MenuItem'
 import Card from '../components/Card'
 import Cart from '../components/Cart'
 
@@ -18,7 +18,7 @@ function Menu() {
       <div className="my-8 flex">
         {menuItems.map((item) => (
           <div className="basis-1/4" key={item.id}>
-            <Card card={item} />
+            <Card item={item} />
           </div>
         ))}
 

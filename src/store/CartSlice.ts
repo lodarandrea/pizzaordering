@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { MenuItem } from '../components/model/MenuCard'
+import { MenuItem } from '../components/model/MenuItem'
 
 export interface AddToCartPayload {
-  card: MenuItem
+  item: MenuItem
 }
 
 export interface CartItems {
@@ -18,12 +18,12 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action: PayloadAction<AddToCartPayload>) => {
       const itemInCart = state.cart.find(
-        (item) => item.card.id === action.payload.card.id
+        (item) => item.card.id === action.payload.item.id
       )
       if (itemInCart) {
         itemInCart.quantity++
       } else {
-        state.cart.push({ card: action.payload.card, quantity: 1 })
+        state.cart.push({ card: action.payload.item, quantity: 1 })
       }
     },
     incrementQuantity: (state, action: PayloadAction<number>) => {

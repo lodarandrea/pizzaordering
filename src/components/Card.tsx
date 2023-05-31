@@ -1,14 +1,14 @@
 import { addToCart } from '../store/CartSlice'
 import { useAppDispatch } from '../store/Hooks'
-import { MenuItem } from './model/MenuCard'
+import { MenuItem } from './model/MenuItem'
 
 interface CardPops {
-  card: MenuItem
+  item: MenuItem
 }
 
-function Card({ card }: CardPops) {
+function Card({ item }: CardPops) {
   const dispatch = useAppDispatch()
-  const { name, imageUrl, ing, price } = card
+  const { name, imageUrl, ing, price } = item
   return (
     <div className="flex flex-col rounded-xl bg-indigo-100 mx-3 h-full relative">
       <div className="overflow-hidden rounded-t-xl">
@@ -28,7 +28,7 @@ function Card({ card }: CardPops) {
         </h3>
         <button
           className="bg-indigo-700 w-32 absolute bottom-2 right-3 rounded-3xl text-white font-medium px-4 py-2"
-          onClick={() => dispatch(addToCart({ card }))}
+          onClick={() => dispatch(addToCart({ item }))}
         >
           Add to Cart
         </button>
