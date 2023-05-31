@@ -9,7 +9,7 @@
 }
 
 .errorPage > p {
-  @apply text-6xl;
+  @apply text-6xl text-center mb-5;
 }
 
 @tailwind components;

@@ -14,13 +14,15 @@ function ErrorPage() {
     >
       {error.status === 404 ? (
         <div className="errorPage">
-          <h1>404</h1>
+          <h1>{error.status}</h1>
           <p>Page not found!</p>
         </div>
       ) : (
         <div className="errorPage">
-          <h1>NO PIZZA TODAY</h1>
+          <h1>SORRY, NO PIZZA TODAY</h1>
           <p>Something went wrong!</p>
+          <p>{error.status}</p>
+          <p> {error.statusText}</p>
         </div>
       )}
     </div>
