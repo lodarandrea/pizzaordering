@@ -5,7 +5,7 @@ export interface AddToCartPayload {
   item: MenuItem
 }
 
-export interface CartItems {
+export interface CartItem {
   card: MenuItem
   quantity: number
 }
@@ -13,7 +13,7 @@ export interface CartItems {
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    cart: [] as CartItems[],
+    cart: [] as CartItem[],
   },
   reducers: {
     addToCart: (state, action: PayloadAction<AddToCartPayload>) => {
