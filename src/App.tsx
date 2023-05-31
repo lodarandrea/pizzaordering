@@ -6,12 +6,14 @@ import LogIn from './pages/LogIn'
 import Registration from './pages/Registration'
 import FooterPage from './pages/FooterPage'
 import Menu from './pages/Menu'
+import ErrorPage from './pages/ErrorPage'
 
 function App(): JSX.Element {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <MainLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
