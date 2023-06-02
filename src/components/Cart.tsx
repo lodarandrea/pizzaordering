@@ -1,4 +1,4 @@
-import CartItem from './CartItem'
+import CartItems from './CartItem'
 import { useAppSelector } from '../store/Hooks'
 
 function Cart() {
@@ -10,7 +10,7 @@ function Cart() {
       </div>
       <div>
         {cart?.map((item) => (
-          <CartItem item={item} />
+          <CartItems item={item} />
         ))}
       </div>
     </div>

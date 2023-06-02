@@ -7,6 +7,7 @@ import Registration from './pages/Registration'
 import FooterPage from './pages/FooterPage'
 import Menu from './pages/Menu'
 import ErrorPage from './pages/ErrorPage'
+import Loading from './components/Loading'
 
 function App(): JSX.Element {
   const router = createBrowserRouter([
@@ -34,6 +35,10 @@ function App(): JSX.Element {
         {
           path: '/menu',
           element: <Menu />,
+        },
+        {
+          path: '/loading',
+          element: <Loading />,
         },
       ],
     },
