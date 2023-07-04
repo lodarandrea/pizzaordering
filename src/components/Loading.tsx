@@ -2,7 +2,7 @@ import Pizza from '../img/pizza.png'
 
 function Loading() {
   return (
-    <div className="flex justify-center items-center w-full my-40">
+    <div className="flex justify-center items-center w-full my-40 ">
       <img
         src={Pizza}
         alt="loading"

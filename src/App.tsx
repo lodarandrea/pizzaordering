@@ -36,10 +36,6 @@ function App(): JSX.Element {
           path: '/menu',
           element: <Menu />,
         },
-        {
-          path: '/loading',
-          element: <Loading />,
-        },
       ],
     },
   ])
