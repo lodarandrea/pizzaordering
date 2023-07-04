@@ -3,12 +3,23 @@ import { customFetch } from '../services/FetchService'
 import { MenuItem } from '../components/model/MenuItem'
 import Card from '../components/Card'
 import Cart from '../components/Cart'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function Menu() {
   const [menuItems, setMenuItems] = useState<Array<MenuItem>>([])
+  const [fetchError, setFetchError] = useState('')
+  const toastId = 'toastCustomId'
   useEffect(() => {
-    customFetch('/food', setMenuItems)
+    customFetch('/fod', setMenuItems, setFetchError)
   }, [])
+
+  if (fetchError) {
+    toast.error('Error! Failed to load the data!', {
+      position: 'top-center',
+      toastId: toastId,
+    })
+  }
 
   return (
     <div className="my-10 mx-4">
