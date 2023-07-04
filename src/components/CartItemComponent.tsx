@@ -13,7 +13,7 @@ export interface CardItemPops {
   item: CartItem
 }
 
-function CartItems({ item }: CardItemPops) {
+function CartItemComponent({ item }: CardItemPops) {
   const dispatch = useAppDispatch()
   const { id, name, imageUrl, price } = item.card
   return (
@@ -49,4 +49,4 @@ function CartItems({ item }: CardItemPops) {
   )
 }
 
-export default CartItems
+export default CartItemComponent
