@@ -8,13 +8,12 @@ import 'react-toastify/dist/ReactToastify.css'
 
 function Menu() {
   const [menuItems, setMenuItems] = useState<Array<MenuItem>>([])
-  const [fetchError, setFetchError] = useState('')
   const toastId = 'toastCustomId'
   useEffect(() => {
-    customFetch('/fod', setMenuItems, setFetchError)
+    customFetch('/food', setMenuItems, handleFetchError)
   }, [])
 
-  if (fetchError) {
+  const handleFetchError = () => {
     toast.error('Error! Failed to load the data!', {
       position: 'top-center',
       toastId: toastId,
