@@ -2,7 +2,7 @@ import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
-  CartItems,
+  CartItem,
 } from '../store/CartSlice'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded'
@@ -10,10 +10,10 @@ import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded'
 import { useAppDispatch } from '../store/Hooks'
 
 export interface CardItemPops {
-  item: CartItems
+  item: CartItem
 }
 
-function CartItem({ item }: CardItemPops) {
+function CartItemComponent({ item }: CardItemPops) {
   const dispatch = useAppDispatch()
   const { id, name, imageUrl, price } = item.card
   return (
@@ -49,4 +49,4 @@ function CartItem({ item }: CardItemPops) {
   )
 }
 
-export default CartItem
+export default CartItemComponent

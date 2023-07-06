@@ -6,12 +6,10 @@ module.exports = {
       keyframes: {
         flow: {
           '0%': { transform: 'translateX(-400px)' },
-          // '50%': { transform: 'translateX(400px)' },
           '100%': { transform: 'translateX(400px)' },
         },
         flowRevert: {
           '0%': { transform: 'translateX(400px)' },
-          // '50%': { transform: 'translateX(-400px)' },
           '100%': { transform: 'translateX(-400px)' },
         },
       },
