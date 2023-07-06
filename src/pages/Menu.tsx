@@ -24,8 +24,9 @@ function Menu() {
               <Card item={item} />
             </div>
           ))}
-
-          <Cart />
+          <div className="basis-1/4">
+            <Cart />
+          </div>
         </div>
       )}
     </div>
