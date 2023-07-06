@@ -12,5 +12,9 @@
   @apply text-6xl text-center mb-5;
 }
 
+.cartButton {
+  @apply m-1 w-6 h-6 hover:scale-110 hover:bg-neutral-700 hover:text-white hover:rounded-sm;
+}
+
 @tailwind components;
 @tailwind utilities;
