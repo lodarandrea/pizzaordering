@@ -6,6 +6,11 @@ import GoToCart from './buttons/GoToCart'
 
 function Cart() {
   const cart = useAppSelector((state) => state.cart)
+  const total = cart?.reduce(
+    (previousTotal, item) => previousTotal + item.quantity * item.card.price,
+    0
+  )
+
   return (
     <div className="flex flex-col  bg-neutral-300 p-2 rounded-xl max-h-96  relative">
       {cart.length > 0 ? (
@@ -21,8 +26,8 @@ function Cart() {
               ))}
             </div>
           </div>
-          <div className="absolute -bottom-7 right-0 left-0 inline-block w-full">
-            <h3 className="px-2 font-bold text-xl">Total: {}</h3>
+          <div className="absolute -bottom-7 right-0 left-0 ">
+            <h3 className="px-2 font-bold text-xl">Total: {total}</h3>
             <GoToCart />
           </div>
         </>
