@@ -1,7 +1,6 @@
 import {
   incrementQuantity,
   decrementQuantity,
-  removeFromCart,
   CartItem,
 } from '../store/CartSlice'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
