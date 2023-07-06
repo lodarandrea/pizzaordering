@@ -1,4 +1,3 @@
-import React from 'react'
 import OrderButton from '../components/buttons/OrderButton'
 import bg from '../img/bg.jpg'
 
