@@ -22,7 +22,12 @@ function Cart() {
             </div>
             <div>
               {cart?.map((item) => (
-                <CartItemComponent item={item} />
+                <CartItemComponent
+                  item={item}
+                  displayImg={false}
+                  enableDelete={false}
+                  location="menu"
+                />
               ))}
             </div>
           </div>
