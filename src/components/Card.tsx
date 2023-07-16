@@ -8,7 +8,7 @@ interface CardPops {
 
 function Card({ item }: CardPops) {
   const dispatch = useAppDispatch()
-  const { name, imageUrl, ing, price } = item
+  const { name, imageUrl, ingred, price } = item
   return (
     <div className="flex flex-col rounded-xl bg-indigo-100 mx-3 h-full relative">
       <div className="overflow-hidden rounded-t-xl">
@@ -20,7 +20,7 @@ function Card({ item }: CardPops) {
       </div>
       <div className="mb-5">
         <h2 className="text-xl font-medium p-4">{name}</h2>
-        <h3 className="text-lg py-2 px-4">{ing}</h3>
+        <h3 className="text-lg py-2 px-4">{ingred}</h3>
       </div>
       <div className="flex py-5 justify-between mx-2 ">
         <h3 className="absolute bottom-2 text-lg font-medium px-4 py-2">

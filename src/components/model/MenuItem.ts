@@ -2,6 +2,6 @@ export interface MenuItem {
   id: number
   name: string
   imageUrl: string
-  ing: string
+  ingred: string
   price: number
 }

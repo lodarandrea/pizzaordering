@@ -11,7 +11,8 @@ const foodHandler = (ctx) => {
       base: 'tomato',
       imageUrl:
         'https://media.istockphoto.com/id/1389527253/hu/fot%C3%B3/veget%C3%A1ri%C3%A1nus-pizza-fel%C3%BCln%C3%A9zetben-minimalista-k%C3%A9k-alapon.jpg?s=2048x2048&w=is&k=20&c=jfbJrRRIGzW3bHGZ2J7pg9IIkXYei7idkBNIIO_6wyY=',
-      ing: 'mozzarella cheese, tomato, olive oil seasoned with garlic, basil',
+      ingred:
+        'mozzarella cheese, tomato, olive oil seasoned with garlic, basil',
       price: 2000,
     },
     {
@@ -20,7 +21,7 @@ const foodHandler = (ctx) => {
       base: 'creemy',
       imageUrl:
         'https://media.istockphoto.com/id/1389527253/hu/fot%C3%B3/veget%C3%A1ri%C3%A1nus-pizza-fel%C3%BCln%C3%A9zetben-minimalista-k%C3%A9k-alapon.jpg?s=2048x2048&w=is&k=20&c=jfbJrRRIGzW3bHGZ2J7pg9IIkXYei7idkBNIIO_6wyY=',
-      ing: 'sour cream, maize, ham, mushroom, smoked cheese',
+      ingred: 'sour cream, maize, ham, mushroom, smoked cheese',
       price: 2000,
     },
     {
@@ -29,7 +30,7 @@ const foodHandler = (ctx) => {
       base: 'barbecue',
       imageUrl:
         'https://media.istockphoto.com/id/1389527253/hu/fot%C3%B3/veget%C3%A1ri%C3%A1nus-pizza-fel%C3%BCln%C3%A9zetben-minimalista-k%C3%A9k-alapon.jpg?s=2048x2048&w=is&k=20&c=jfbJrRRIGzW3bHGZ2J7pg9IIkXYei7idkBNIIO_6wyY=',
-      ing: 'spiced beef, onion, barbecue sauce, green paprika, mozzarella',
+      ingred: 'spiced beef, onion, barbecue sauce, green paprika, mozzarella',
       price: 2000,
     },
   ]

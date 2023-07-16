@@ -9,11 +9,43 @@ import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded'
 import { useAppDispatch } from '../store/Hooks'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded'
 
+export type Location = 'menu' | 'checkout'
+
 export interface CardItemPops {
   item: CartItem
   displayImg: boolean
   enableDelete: boolean
-  location: 'menu' | 'checkout'
+  location: Location
+}
+
+interface CartItemStyle {
+  mainContainer: string
+  infoContainer: string
+  priceContainer: string
+  quantityContainer: string
+  description: string
+  price: string
+}
+
+const styles: { [location in Location]: CartItemStyle } = {
+  menu: {
+    mainContainer:
+      'flex flex-col justify-between h-full border-b-2 border-neutral-800 py-2',
+    infoContainer: '',
+    priceContainer: 'flex justify-between',
+    quantityContainer: 'flex items-center justify-between order-last',
+    description: '',
+    price: 'font-medium px-4 py-2 order-first',
+  },
+  checkout: {
+    mainContainer: 'flex my-3 w-full',
+    infoContainer: 'flex justify-start items-center basis-2/3',
+    priceContainer: 'flex basis-1/3 justify-end items-center w-full',
+    quantityContainer:
+      'flex items-center justify-evenly mx-3 w-1/3 order-first',
+    description: 'flex flex-col px-2',
+    price: 'font-medium order-last mx-3 justify-end',
+  },
 }
 
 function CartItemComponent({
@@ -23,20 +55,11 @@ function CartItemComponent({
   location,
 }: CardItemPops) {
   const dispatch = useAppDispatch()
-  const { id, imageUrl, name, ing, price } = item.card
+  const { id, imageUrl, name, ingred, price } = item.card
+
   return (
-    <div
-      className={`flex ${
-        location === 'menu'
-          ? 'flex-col justify-between h-full border-b-2 border-neutral-800 py-2'
-          : 'my-3 w-full'
-      } `}
-    >
-      <div
-        className={`${
-          location === 'menu' ? '' : 'flex justify-start items-center basis-2/3'
-        }`}
-      >
+    <div className={styles[location].mainContainer}>
+      <div className={styles[location].infoContainer}>
         {displayImg ? (
           <img
             src={imageUrl}
@@ -44,34 +67,13 @@ function CartItemComponent({
             className="w-24 h-full object-cover rounded-md object-center"
           />
         ) : null}
-        <div className={`${location === 'menu' ? '' : 'flex flex-col px-2'}`}>
-          <h2
-            className={`font-medium ${
-              location === 'menu' ? 'text-lg' : 'text-xl'
-            }`}
-          >
-            {name}
-          </h2>
-          <h3 className={`${location === 'menu' ? 'text-sm' : 'text-lg'}`}>
-            {ing}
-          </h3>
+        <div className={styles[location].description}>
+          <h2 className="font-medium text-xl">{name}</h2>
+          <h3 className="text-sm">{ingred}</h3>
         </div>
       </div>
-
-      <div
-        className={`flex  ${
-          location === 'menu'
-            ? 'justify-between'
-            : 'basis-1/3 justify-end items-center w-full'
-        }`}
-      >
-        <h3
-          className={`font-medium ${
-            location === 'menu'
-              ? 'px-4 py-2 order-first'
-              : 'order-last text-lg mx-3 justify-end'
-          } `}
-        >
+      <div className={styles[location].priceContainer}>
+        <h3 className={styles[location].price}>
           Price: {price * item.quantity} Ft
         </h3>
         {enableDelete ? (
@@ -82,20 +84,14 @@ function CartItemComponent({
             <DeleteRoundedIcon />
           </button>
         ) : null}
-        <div
-          className={`flex items-center ${
-            location === 'menu'
-              ? 'justify-between order-last'
-              : 'justify-evenly mx-3 w-1/3 order-first'
-          }`}
-        >
+        <div className={styles[location].quantityContainer}>
           <button
             onClick={() => dispatch(incrementQuantity(id))}
             className="cartButton"
           >
             <AddRoundedIcon fontSize="small" />
           </button>
-          <h3>{item.quantity} qty</h3>
+          <h2>{item.quantity} qty</h2>
           <button
             onClick={() => dispatch(decrementQuantity(id))}
             className="cartButton"
